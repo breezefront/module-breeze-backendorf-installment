@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="breeze.js">
+            <arguments>
+                <argument name="bundles" xsi:type="array">
+                    <item name="default" xsi:type="array">
+                        <item name="items" xsi:type="array">
+                            <item name="Backendorf_Installment/js/installment" xsi:type="array">
+                                <!-- Path to file with component declaration -->
+                                <item name="path" xsi:type="string">Swissup_BreezeBackendorfInstallment/js/installment</item>
+
+                                <!-- A flag that tells Breeze if the component should be used -->
+                                <item name="enabled" xsi:type="helper" helper="Swissup\Breeze\Helper\Config::isEnabled">
+                                    <param name="path">backendorf_installment/general/is_enabled</param>
+                                </item>
+
+                                <item name="import" xsi:type="array">
+                                    <item name="price-utils" xsi:type="string">Swissup_Breeze/js/common/price-utils</item>
+                                </item>
+
+                                <item name="names" xsi:type="array">
+                                    <item name="fullname" xsi:type="string">Backendorf_Installment/js/installment</item>
+                                    <item name="shortname" xsi:type="string">installment</item>
+                                </item>
+                            </item>
+                            <item name="backendorf-installment-price-box-mixin" xsi:type="string">Swissup_BreezeBackendorfInstallment/js/price-box-mixin</item>
+                        </item>
+                    </item>
+                </argument>
+            </arguments>
+        </referenceBlock>
+    </body>
+</page>
